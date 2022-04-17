@@ -4,11 +4,7 @@ import { TodosContext } from "./App";
 import {
   Box,
   Button,
-  ButtonGroup,
-  Form,
   FormControl,
-  FormGroup,
-  FormHelperText,
   Input,
   InputLabel,
   Paper,
@@ -17,8 +13,7 @@ import {
   TableCell,
   TableContainer,
   TableHead,
-  TableRow,
-  TextField
+  TableRow
 } from "@mui/material";
 
 const ToDoList = () => {
@@ -30,8 +25,6 @@ const ToDoList = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch({ type: "add", payload: todoText });
-    // setTodoText("");
 
     if (editMode) {
       dispatch({ type: "edit", payload: { ...editTodo, text: todoText } });
